@@ -18,7 +18,7 @@ while True:
         for points in handPoints:
             mpDwaw.draw_landmarks(img, points,hands.HAND_CONNECTIONS)
             #podemos enumerar esses pontos da seguinte forma
-            for id,cord in enumerate(points.landmark):
+            for id, cord in enumerate(points.landmark):
                 cx, cy = int(cord.x * w), int(cord.y * h)
                 cv2.putText(img, str(id), (cx, cy + 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
                 pontos.append((cx,cy))
